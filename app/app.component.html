@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<angular-cropper #angularCropper [cropperOptions]="config" 
+(export)="resultImageFun($event)" (ready)="checkstatus($event)"
+[imageUrl]="imageUrl"></angular-cropper>
+<br>
+<br>
+<button (click)="CropMe()">CropMe</button>
+
+<br>
+<br>
+<img [src]="resultImage" />
+<br>
+<img [src]="resultResult" />
